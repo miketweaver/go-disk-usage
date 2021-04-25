@@ -24,7 +24,7 @@ func (this *DiskUsage) Free() uint64 {
 
 // Total available bytes on file system to an unpriveleged user
 func (this *DiskUsage) Available() uint64 {
-	return this.stat.Bavail * uint64(this.stat.Bsize)
+	return uint64(this.stat.Bavail) * uint64(this.stat.Bsize)
 }
 
 // Total size of the file system
